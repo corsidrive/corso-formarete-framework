@@ -6,7 +6,7 @@
 - elementi HTML
 - funzioni
 
-- [documentQuerySelector]()
+- [documentQuerySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 - [CSS Selector](https://www.w3schools.com/csSref/css_selectors.php) 
 
 ## link utili

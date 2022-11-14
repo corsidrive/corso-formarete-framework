@@ -56,7 +56,14 @@
     <div class="quadrato">10</div>
 
     <script>
-        const quadrato = document.querySelector('.quadrato')
+        const quadrati = document.querySelectorAll('.quadrato')
+        
+        quadrati.forEach(function(el){
+                el.style.backgroundColor = "green"
+        })
+        
+        console.log("ciao sono un messaggio che arriva dal tuo script") 
+        console.log(quadrati) 
     </script>
 </body>
 
