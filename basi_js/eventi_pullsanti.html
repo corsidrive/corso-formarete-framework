@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titolo">sono il titolo che diventerà rosso</h1>
+
+    
+    <button id="cambia-colore-btn">rosso</button>
+    <script>
+        // 1. trovare i protagonisti
+        const btn = document.getElementById('cambia-colore-btn')
+        // const btn = document.querySelector('#cambia-colore-btn')
+        const titolo = document.querySelector('#titolo')
+
+        // Dichiarazione di una funzione
+        function cambiaColore(elementoCheCambieraColore,colore){
+            /**
+            * DOCS formato dei colori in CSS
+            * https://www.w3schools.com/tags/ref_colornames.asp
+            * https://www.w3schools.com/cssref/css_colors_legal.php
+            * https://www.w3schools.com/css/css_text.asp
+            */
+            // colore esadecimale
+            elementoCheCambieraColore.style.color = colore // red 
+
+        }
+
+
+
+        // funzione anonima
+        btn.onclick = function (){
+                cambiaColore(titolo,'red')
+                
+        }
+    </script>
+</body>
+</html>
