@@ -19,6 +19,7 @@
         font-size: 10px;
         }
         */
+        
         .quadrato {
             /*
             CammelCase
@@ -31,12 +32,14 @@
             width: 100px;
             height: 100px;
             color: white;
-            font-size: 16px;
+            font-size: 32px;
             float: left;
         }
+
         #quinto {
             background-color: red;
         }
+        
     </style>
 </head>
 
@@ -44,8 +47,8 @@
     <h1>Document Query selector</h1>
     <p>Seleziona gli elementi della pagina usando dei delettori CSS</p>
 
-    <div class="quadrato">1</div>
-    <div class="quadrato">2</div>
+    <div class="quadrato"><b>uno</b></div>
+    <div class="quadrato">due</div>
     <div class="quadrato">3</div>
     <div class="quadrato">4</div>
     <div id="quinto" class="quadrato">5</div>
@@ -56,14 +59,14 @@
     <div class="quadrato">10</div>
 
     <script>
+        // 
         const quadrati = document.querySelectorAll('.quadrato')
-        
-        quadrati.forEach(function(el){
-                el.style.backgroundColor = "green"
-        })
-        
-        console.log("ciao sono un messaggio che arriva dal tuo script") 
-        console.log(quadrati) 
+        console.log(quadrati)
+        quadrati.forEach(function(currentValue){
+            // console.log("sono il",currentValue.innerHTML)
+            currentValue.style.backgroundColor =  "yellow"
+        }) 
+
     </script>
 </body>
 
