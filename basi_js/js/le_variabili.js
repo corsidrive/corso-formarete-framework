@@ -1,3 +1,5 @@
+console.clear();
+
 // ECMASCRIPT prima delll 2015 | ES6
 // DICHIARAZIONE
 var indirizzo 
@@ -50,12 +52,24 @@ const  saluto = "sono fuori dalll'isola (funzione)"
 
 function prova() {
      
-    console.log(saluto)
+    // console.log(saluto)
     function torre(){
-        console.log(saluto)  
+        // console.log(saluto)  
     }
     torre();
 }
 
 prova()
-console.log(saluto)
+// console.log(saluto)
+
+const  a = "b"
+// a = "c" // DA ERRORE
+/** ARRAY */
+
+// const colori = new Array("rosso",'verde','blue')
+const colori = ["rosso",'verde','blue']
+colori.push("giallo")
+
+
+
+console.log(colori);
