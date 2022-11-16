@@ -18,3 +18,7 @@
 - [Freecodecamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript)
 - [javascript.info](https://javascript.info/
 )
+
+## ESTENSIONI vscode
+
+- [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
