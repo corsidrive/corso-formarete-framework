@@ -30,7 +30,8 @@
 
 - [nodemon](https://www.npmjs.com/package/nodemon)
 
-> se la powershell da errore seguire questo video
+
+> se la **powershell** da errore seguire questo video
 > [https://www.youtube.com/watch?v=8MBPDG6XDfE](https://www.youtube.com/watch?v=8MBPDG6XDfE)
 
 o eseguire direttamente
