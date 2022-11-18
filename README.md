@@ -61,3 +61,6 @@ le applicazioni node vengono installati nella cartella
 ## ESTENSIONI vscode
 
 - [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+
+
+- Metodi degli Array

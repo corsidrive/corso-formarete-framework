@@ -44,10 +44,10 @@ console.log(moltiplicaPer2)
 
 // somma = 5 + 5 --> 10
 
-function tabellina(numero){
-    // let numero = 5
+function tabellina(moltiplicatore){
+    // let moltiplicatore = 5
     return function(element){
-        return element * numero // 5
+        return element * moltiplicatore // 5
     }
 }
 
@@ -59,17 +59,32 @@ const tabellina100 = numeri.map(tabellina(100))
 console.log("tabellina 100",tabellina100)
 
 
-
-function maggioreDi(numero){
+// Soluzione
+function maggioreDi(soglia){
 // scrivi tua soluzione
+        return function(element) {
+            return element > soglia
+        }
 }
-
 
 // xROBY concatenare le funzioni
 // numeri.filter(maggioreDi(1)).map(tabelllina(4)) 
-numeri.filter(maggioreDi(1))
-numeri.filter(maggioreDi(5))
-numeri.filter(maggioreDi(100))
+const resMagg1 = numeri.filter(maggioreDi(1))
+console.log(resMagg1)
+console.log(numeri.filter(maggioreDi(5)))
+console.log(numeri.filter(maggioreDi(100)))
+
+
+const per5magg33 = numeri.map(tabellina(5)).filter(maggioreDi(10))
+
+console.log(per5magg33);
+
+// console.clear()
+
+numeri.filter(maggioreDi(33))
+const prova = numeri.filter(maggioreDi(4)).map(tabellina(5))
+console.log(prova)
+
 
 
 
