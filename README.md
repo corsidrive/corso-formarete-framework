@@ -34,12 +34,10 @@
 > se la **powershell** da errore seguire questo video
 > [https://www.youtube.com/watch?v=8MBPDG6XDfE](https://www.youtube.com/watch?v=8MBPDG6XDfE)
 
-o eseguire direttamente
+o eseguire direttamente nella **powershell** con i diritti di **Amministratore**
 
 ```bash
-
 Set-ExecutionPolicy Unrestricted
-
 ```
 
 ```bash
@@ -53,11 +51,16 @@ npm install -g nodemon
 
 npm install -g ng-cli
 ```
-le applicazioni node vengono installati nella cartella 
+Le applicazioni/script installati localmente vengono scaricati nella cartella: 
 
-**node_modules** è la cartella dove vengono scaricati i pacchetti
-
+**node_modules** 
 
 ## ESTENSIONI vscode
 
-- [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) 
+
+
+##  Array Methods
+
+
+## Arrow Function
