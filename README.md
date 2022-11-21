@@ -71,7 +71,10 @@ Le applicazioni/script installati localmente vengono scaricati nella cartella:
 
     - diversi modi di scrivere arrow function
 
+## Moduli 
 
+### Moduli ES6 
+ - [introduzione ai moduli](https://javascript.info/modules-intro) 
 <!-- 
 ## Moduli in node 
 
