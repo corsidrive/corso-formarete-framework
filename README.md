@@ -65,12 +65,11 @@ Le applicazioni/script installati localmente vengono scaricati nella cartella:
     - filter
     - map
     - includes
+    - 
 
 ## Arrow Function
 
     - diversi modi di scrivere arrow function
-
-
 
 
 <!-- 

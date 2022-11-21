@@ -15,8 +15,8 @@ const Todoist = [
     },
     {
         label:"Meeting su zoom",
-        done:false,
-        tags: ['lavoro','urgente']
+        done:true,
+        tags: ['casa','urgente']
     },
 ]
 
@@ -39,8 +39,6 @@ const resCasa = Todoist.filter(casa)
 // FIND TAG
 function findTag(search){
         return function urgente(todo) { 
-            //console.log(todo.label,"----")
-
             const res = todo.tags.includes(search)
             return res
         }
@@ -50,14 +48,22 @@ function findTag(search){
 // console.log(findTag("casa"));
 Todoist.filter(findTag("casa"))
 
-
-
 function allDone(todo){
     return todo.done == true
 }
 
-// console.log("ho fatto tutto ?", Todoist.every(allDone))
-// console.log("ho fatto tutto per la casa ?", Todoist.fil// ter(findTag('casa')).every(allDone))
+console.log("ho fatto tutto ?", Todoist.every(allDone))
+
+// hai fatto tutto per lla casa ?
+
+// const risutatoPerCasa = Todoist.filter(findTag('casa')) // -->
+// const hoFinito = risutatoPerCasa.every(allDone)
+
+const hoFinito = Todoist
+                 .filter(findTag('casa'))
+                 .every(allDone)
+
+// console.log(hoFinito);
 
 // Hofatto tutto ?
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
