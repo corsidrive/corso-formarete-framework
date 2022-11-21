@@ -24,19 +24,19 @@ const Todoist = [
         id:"d",
         label:"Test per maiuscole",
         done:true,
-        tags: ['lavoro','Urgente']
+        tags: ['Urgente']
     },
     {
         id:"e",
         label:"Test per maiuscole",
         done:true,
-        tags: ['lavoro','URGENTE']
+        tags: ['URGENTE']
     },
     {
         id:"f",
         label:"Test per maiuscole",
         done:true,
-        tags: ['lavoro','urgEnTe']
+        tags: ['urgEnTe']
     },
 ]
 
@@ -52,7 +52,7 @@ test_trova_urgente()
 function test_trova_tag_lavoro(){
     const res = Todoist.filter(findTag("lavoro"))
     
-    //console.log("mi aspetto di trovare 1 item", res.length === 1,res.length)
-    //console.log("mi aspetto di trovare 1 item label", res[0].label === "Meeting su zoom")
+    console.log("mi aspetto di trovare 1 item", res.length === 1,res.length)
+    console.log("mi aspetto di trovare 1 item label", res[0].label === "Meeting su zoom")
 }
-// test_trova_tag_lavoro()
+test_trova_tag_lavoro()
