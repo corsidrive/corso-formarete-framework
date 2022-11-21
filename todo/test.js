@@ -43,7 +43,7 @@ const Todoist = [
 
 function test_trova_urgente(){
     const res = Todoist.filter(findTag("urgente"))
-    console.log("mi aspetto di trovare 4 item", res.length === 4)
+    console.log("mi aspetto di trovare 4 item", res.length === 5,res)
     
 }
 test_trova_urgente()
@@ -52,7 +52,7 @@ test_trova_urgente()
 function test_trova_tag_lavoro(){
     const res = Todoist.filter(findTag("lavoro"))
     
-    console.log("mi aspetto di trovare 1 item", res.length === 1,res.length)
-    console.log("mi aspetto di trovare 1 item label", res[0].label === "Meeting su zoom")
+    //console.log("mi aspetto di trovare 1 item", res.length === 1,res.length)
+    //console.log("mi aspetto di trovare 1 item label", res[0].label === "Meeting su zoom")
 }
-test_trova_tag_lavoro()
+// test_trova_tag_lavoro()

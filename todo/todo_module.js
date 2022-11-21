@@ -1,10 +1,10 @@
 
 export function findTag(search){
-    return function urgente(todo) { 
-        // findTag.toLowecase == search.tolowercase
-
-        //const res = todo.tags.includes(search)
-        return 
+    return function (todo,index) { 
+        const _search = search.toLowerCase()
+        const _tags = todo.tags.map(t => t.toLowerCase())    
+        return _tags.includes(_search)
+        // return 
     }
 }
 
