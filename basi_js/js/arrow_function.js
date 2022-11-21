@@ -16,7 +16,6 @@ const res3 = colori.find( colore => {
 
 
 const res4 = colori.find( colore => colore == 'red')
-
 const res5 = colori.find( (colore,index) => colore == 'red' )
 
 

@@ -62,5 +62,21 @@ Le applicazioni/script installati localmente vengono scaricati nella cartella:
 
 ##  Array Methods
 
+    - filter
+    - map
+    - includes
 
 ## Arrow Function
+
+    - diversi modi di scrivere arrow function
+
+
+
+
+<!-- 
+## Moduli in node 
+
+- [require / export](https://www.tutorialsteacher.com/nodejs/nodejs-module-exports) 
+ -->
+
+    
