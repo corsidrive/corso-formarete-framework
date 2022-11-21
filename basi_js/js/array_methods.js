@@ -64,7 +64,7 @@ const hoFinito = Todoist
                  .every(allDone)
 
 // console.log(hoFinito);
-
+// https://meet.google.com/bez-pqdg-rjm
 // Hofatto tutto ?
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
 
