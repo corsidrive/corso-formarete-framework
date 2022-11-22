@@ -20,30 +20,31 @@ const Todoist = [
         done:true,
         tags: ['lavoro','urgente']
     },
+    // TEST PER FIX tag case insensitive
     {
         id:"d",
         label:"Test per maiuscole",
         done:true,
-        tags: ['lavoro','Urgente']
+        tags: ['Urgente']
     },
     {
         id:"e",
         label:"Test per maiuscole",
         done:true,
-        tags: ['lavoro','URGENTE']
+        tags: ['URGENTE']
     },
     {
         id:"f",
         label:"Test per maiuscole",
         done:true,
-        tags: ['lavoro','urgEnTe']
+        tags: ['urgEnTe']
     },
 ]
 
 
 function test_trova_urgente(){
     const res = Todoist.filter(findTag("urgente"))
-    console.log("mi aspetto di trovare 4 item", res.length === 4)
+    console.log("mi aspetto di trovare 5 item", res.length === 5)
     
 }
 test_trova_urgente()
@@ -51,8 +52,8 @@ test_trova_urgente()
 
 function test_trova_tag_lavoro(){
     const res = Todoist.filter(findTag("lavoro"))
-    
-    console.log("mi aspetto di trovare 1 item", res.length === 1,res.length)
-    console.log("mi aspetto di trovare 1 item label", res[0].label === "Meeting su zoom")
+
+    console.log("test_trova_tag_lavoro mi aspetto di trovare 1 item", res.length === 1,res.length)
+    console.log("test_trova_tag_lavoro mi aspetto di trovare 1 item label", res[0].label === "Meeting su zoom")
 }
 test_trova_tag_lavoro()
