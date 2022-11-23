@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+    <div id="test_render_item" class="test">
+
+    </div>
+    <script>
+
+
+        function renderItem(data){
+            return `<li>
+                        <label for="a">
+                            <input type="checkbox" ${data.done ? 'checked':''} oninput="addRemove(this)"  id="a">
+                            comprare il latte
+                        </label>
+                    </li>`;
+        }
+        
+    </script>
+    <script>
+        let data = 
+                {
+                id:"a",
+                label:"Comprare il latte",
+                done:false,
+                tags: ['urgente','casa']
+                }
+
+        document.getElementById('test_render_item').innerHTML = renderItem(data);
+
+        function addRemove(el) {
+                console.log(el.parentElement.classList.toggle('done'),el.parentElement)
+                data = {...data,...{done:!data.done}}
+                console.log(data);        
+        // const tests = document.querySelectorAll(".test");
+        // tests.forEach()
+        }
+    </script>
+</body>
+</html>

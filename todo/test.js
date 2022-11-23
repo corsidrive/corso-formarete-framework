@@ -43,6 +43,9 @@ const Todoist = [
 
 
 function test_trova_urgente(){
+    
+    
+    
     const res = Todoist.filter(findTag("urgente"))
     console.log("mi aspetto di trovare 5 item", res.length === 5)
     
