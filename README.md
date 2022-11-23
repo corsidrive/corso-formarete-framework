@@ -55,6 +55,18 @@ Le applicazioni/script installati localmente vengono scaricati nella cartella:
 
 **node_modules** 
 
+## Installazione di bootstrap con node
+
+```bash
+npm i bootstrap@5.2.3
+``` 
+inclusione del file 
+
+```html
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+```
+
+
 ## ESTENSIONI vscode
 
 - [Git graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) 
@@ -75,6 +87,11 @@ Le applicazioni/script installati localmente vengono scaricati nella cartella:
 
 ### Moduli ES6 
  - [introduzione ai moduli](https://javascript.info/modules-intro) 
+
+ - export
+ - import
+
+
 <!-- 
 ## Moduli in node 
 
