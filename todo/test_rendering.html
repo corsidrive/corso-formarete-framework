@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rendering list item</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div id="test-list">
+            
+        </div>
+    </main>
+    <script type="module">
+        import { RenderingListItem } from './todo_rendering_module.js'
+
+
+        function test_rendering_standard(){
+            const todo = {
+                id:"a",
+                label:"ciccio",
+                done:true,
+                tags: ['urgente','casa']
+            }
+        
+            const html = RenderingListItem(todo);
+            document.getElementById('test-list').innerHTML = html
+        }
+        test_rendering_standard()
+    </script>  
+</body>
+</html>

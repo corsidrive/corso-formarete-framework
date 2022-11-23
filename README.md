@@ -91,11 +91,10 @@ inclusione del file
  - export
  - import
 
-
 <!-- 
 ## Moduli in node 
 
 - [require / export](https://www.tutorialsteacher.com/nodejs/nodejs-module-exports) 
  -->
 
-    
+- npm init
