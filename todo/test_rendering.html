@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rendering list item</title>
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./todo.css" rel="stylesheet">
 </head>
 <body>
     <main class="container">
         <div id="test-list">
-            
+         
         </div>
     </main>
     <script type="module">
@@ -20,15 +21,49 @@
         function test_rendering_standard(){
             const todo = {
                 id:"a",
-                label:"ciccio",
+                label:"comprare le uova",
                 done:true,
                 tags: ['urgente','casa']
             }
-        
+
             const html = RenderingListItem(todo);
-            document.getElementById('test-list').innerHTML = html
+            document.getElementById('test-list').
+            insertAdjacentHTML("beforeend",html) 
         }
         test_rendering_standard()
+
+
+
+        function test_todo_done_false(){
+            const todo = {
+                id:"b",
+                label:"Comprare il latte",
+                done:false,
+                tags: ['urgente','casa']
+            }
+
+            const html = RenderingListItem(todo);
+            document.getElementById('test-list')
+            .insertAdjacentHTML("beforeend",html)
+        }
+        test_todo_done_false()
+        
+        function test_todo_testo_lungo(){
+            const todo = {
+                id:"d",
+                label:"Comprare il latte lorem ipsum e ciao come va sono una frase troppo lunga",
+                done:false,
+                tags: ['urgente','casa']
+            }
+
+            const html = RenderingListItem(todo);
+            document.getElementById('test-list')
+            .insertAdjacentHTML("beforeend",html)
+        }
+        test_todo_testo_lungo()
+        
+
+        
     </script>  
 </body>
 </html>
