@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO APP</title>
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    
+      .done {
+        background-color: rgba(0, 0, 0, 0.231);
+      }
+    </style>
 </head>
 <body>
     <main class="container">
@@ -18,13 +24,33 @@
           <button class="btn btn-primary" type="button" id="bott-aggiungi">aggiungi</button>
         </div>
         
-        <ul class="list-group">
-          <!-- 
-            generata da javascript 
-            json -> html
-          -->
+        <ul id="lista" class="list-group">
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="i-1">
+            <label class="form-check-label" for="i-1">1 checkbox</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="i-2">
+            <label class="form-check-label" for="i-2">2 checkbox</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="i-3">
+            <label class="form-check-label" for="i-3">3 checkbox</label>
+          </li>
         </ul>
     </main>
+    <script>
+      document.getElementById('lista').addEventListener('click',(event)=>{
+        event.preventDefault()
+        // console.log("event",event.currentTarget)
+        // console.log("event",event.target.closest('.list-group-item'))
+        const item = event.target.closest('.list-group-item')
+        const input = item.querySelector('input')
+              input.checked = !input.checked 
+              // item.classList.toggle('done')
+              item.className = input.checked ? (item.className+' done') : item.className.replace(' done','')
+      },true)
+    </script>
     <script src="main.js" type="module"></script>
 </body>
 </html>
