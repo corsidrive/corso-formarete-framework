@@ -1,5 +1,5 @@
 // template literal 
-function RenderingListItem(todo) {
+ function RenderingListItem(todo) {
     // Ternary operator
     const _checked = todo.done ? 'checked': ''
     const _done = todo.done ? 'done': ''
@@ -17,4 +17,4 @@ function RenderingListItem(todo) {
             </li>`
 }
 
-export { RenderingListItem }
+export {    RenderingListItem }
