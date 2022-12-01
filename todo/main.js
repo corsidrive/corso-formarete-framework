@@ -8,13 +8,14 @@ getTodos().then((data)=>{
 
     // delegation event 
     TodoListElement.addEventListener('click',(event)=>{
-            // console.log(event.target.classList.toggle('done'))
             event.preventDefault()
+            // console.log(event.target.classList.toggle('done'))
             const label = event.target.closest(".list-group-item").querySelector('label')
-            const input = event.target.closest(".list-group-item").querySelector('input')
-            input.checked = !input.checked 
             label.classList.toggle('done')
-            console.log(input,label)
+
+            const input = event.target.closest(".list-group-item").querySelector('.form-check-input')
+            input.checked = !input.checked
+
     })
 
 })
