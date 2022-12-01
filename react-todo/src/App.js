@@ -1,5 +1,9 @@
 import './App.css';
 import TodoList from './db.json'
+
+function clickHandler(event) {
+      console.log(event)
+}
 // const TodoList = 
 // console.log(TodoList);
 function App() {
@@ -16,12 +20,18 @@ function App() {
         </div>
         
         <ul className="list-group">
-
-            <li className="list-group-item">
-              <input className="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"/>
-              <label className="form-check-label" htmlFor="firstCheckbox">First checkbox</label>
-            </li>
-            
+            {
+              TodoList.todos.map( todo => (
+                <li key={todo.id} className="list-group-item" onClick={clickHandler} >
+                  <input className="form-check-input me-1" type="checkbox" value="" id={todo.id}/>
+                  <label className="form-check-label" htmlFor={todo.id}>{todo.label }</label> 
+                  <span class="badge badge-primary badge-pill"> urgente</span>
+                  <span class="badge badge-primary badge-pill"> casa</span>
+                  <span class="badge badge-primary badge-pill"> mario</span>
+                </li>
+              ))
+            }
+           
         </ul>
 
     </main>
