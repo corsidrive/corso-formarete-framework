@@ -1,26 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const somma = 5 + 5;
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <h1>{somma}</h1>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main class="container">
+        <header class="p-3 bg-secondary text-center">
+            <h1>Todo APP</h1>
+        </header>
+        
+        <div class="input-group my-3">
+          <input type="text" class="form-control" placeholder="Aggiungi una cosa da fare" aria-label="Aggiungi una cosa da fare" aria-describedby="bottone-aggiungi"/>
+          <button class="btn btn-primary" type="button" id="bott-aggiungi">aggiungi</button>
+        </div>
+        
+        <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"/>
+              <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox"/>
+              <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox"/>
+              <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+            </li>
+          </ul>
+
+    </main>
     </div>
   );
 }
