@@ -7,6 +7,7 @@ function clickHandler(event) {
 // const TodoList = 
 // console.log(TodoList);
 function App() {
+
   return (
     <div className="App">
       <main className="container">
@@ -21,15 +22,21 @@ function App() {
         
         <ul className="list-group">
             {
-              TodoList.todos.map( todo => (
-                <li key={todo.id} className="list-group-item" onClick={clickHandler} >
-                  <input className="form-check-input me-1" type="checkbox" value="" id={todo.id}/>
-                  <label className="form-check-label" htmlFor={todo.id}>{todo.label }</label> 
-                  <span class="badge badge-primary badge-pill"> urgente</span>
-                  <span class="badge badge-primary badge-pill"> casa</span>
-                  <span class="badge badge-primary badge-pill"> mario</span>
-                </li>
-              ))
+              TodoList.todos.map( todo => {
+                const badge = todo.tags.map(tag => <span key={tag} className="badge badge-primary bg-primary badge-pill">{tag.toLowerCase()} </span>) 
+                
+                return (
+                  <li key={todo.id} className="list-group-item d-flex justify-content-between" onClick={clickHandler} >
+                    <div className="left">
+                        <input className="form-check-input me-1" type="checkbox" value="" id={todo.id}/>
+                        <label className="form-check-label" htmlFor={todo.id}>{todo.label }</label>
+                    </div> 
+                    <div className="right">{badge}</div>  
+                  </li>
+                )
+              })
+                
+                
             }
            
         </ul>
