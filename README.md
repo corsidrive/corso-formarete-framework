@@ -98,3 +98,21 @@ inclusione del file
  -->
 
 - npm init
+
+
+
+
+# REACT
+
+## Articoli 
+
+- [component](https://create-react-app.dev/docs/importing-a-component) 
+- [component function component](https://www.robinwieruch.de/react-function-component/)
+
+- [Thinking React](https://reactjs.org/docs/thinking-in-react.html)
+- [lo state](https://reactjs.org/docs/hooks-state.html)
+
+
+- [Aggiungere bootstrap](https://create-react-app.dev/docs/adding-bootstrap/)
+- [Props e data in React](https://medium.com/@kenlynterai/data-handling-in-reactjs-c53f66b45309)
+- [Props e data in React Ufficiale](https://reactjs.org/docs/components-and-props.html)
