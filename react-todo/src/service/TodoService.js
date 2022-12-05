@@ -26,22 +26,33 @@ const addTodo = function(oldTodoList,label = "da fare",tags = []){
 
 
 function removeTodo(oldTodoList,idDaEliminare) {
-    const newTodoList = [...oldTodoList]
+    const newTasklist = [...oldTodoList]
     const index =  newTasklist.findIndex((todo)=>{
-        console.log("vedo:",todo.id,idDaEliminare,todo.id == idDaEliminare)
+        //console.log("vedo:",todo.id,idDaEliminare,todo.id == idDaEliminare)
         return todo.id == idDaEliminare
     })
-    console.log("trovato",index);
+    newTasklist.splice(index,1)
+    return newTasklist
 }
 
-let newTasklist = []
 
-newTasklist = addTodo(newTasklist);
+const toggleTodo = (oldTodoList,idDaCambiare) => {
+    const newTasklist = [...oldTodoList]
+    const index = newTasklist.findIndex(todo => todo.id == idDaCambiare)
+    newTasklist[index].done = !newTasklist[index].done 
+
+    return newTasklist
+}
+
+
+let newTasklist = []
+newTasklist = addTodo(newTasklist); // default // done false
 newTasklist = addTodo(newTasklist,'Comprare il latte');
-newTasklist = addTodo(newTasklist,'Meeet',['urgente']);
+newTasklist = addTodo(newTasklist,'Meeet di lavoro',['urgente']);
 
 console.log("prima della rimozione",newTasklist);
 
 newTasklist = removeTodo(newTasklist,1)
-
+newTasklist = toggleTodo(newTasklist,0)
+newTasklist = toggleTodo(newTasklist,2)
 console.log("dopo della rimozione",newTasklist);
