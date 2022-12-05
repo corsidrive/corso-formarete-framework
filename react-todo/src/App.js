@@ -1,7 +1,6 @@
 import './App.css';
 import SearchBar from './components/search-bar';
 import TaskItem from './components/task-item';
-
 import TodoList from './db.json'
 
 
@@ -17,7 +16,7 @@ function App() {
         </header>
         {/* const pippo = "ciao sono pippo" */}
         {/* <SearchBar colore={"rosso"} pippo={"ciao sono pippo"} /> */}
-        <SearchBar  />
+        <SearchBar buttonLabel="nuova task" />
         
         <ul className="list-group">
             {

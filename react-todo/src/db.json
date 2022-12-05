@@ -1,7 +1,7 @@
 {
     "todos":[
         {
-            "id": "a",
+            "id": 1,
             "label": "Comprare il latte",
             "done": true,
             "tags": [
@@ -10,7 +10,7 @@
             ]
         },
         {
-            "id": "b",
+            "id": 2,
             "label": "Comprare Farina",
             "done": true,
             "tags": [
@@ -18,7 +18,7 @@
             ]
         },
         {
-            "id": "c",
+            "id": 3,
             "label": "Meeting su zoom",
             "done": true,
             "tags": [
@@ -27,7 +27,7 @@
             ]
         },
         {
-            "id": "d",
+            "id": 4,
             "label": "Test per maiuscole",
             "done": true,
             "tags": [
@@ -35,7 +35,7 @@
             ]
         },
         {
-            "id": "e",
+            "id": 5,
             "label": "Test per maiuscole",
             "done": true,
             "tags": [
@@ -43,7 +43,7 @@
             ]
         },
         {
-            "id": "f",
+            "id": 6,
             "label": "Test per maiuscole",
             "done": true,
             "tags": [
