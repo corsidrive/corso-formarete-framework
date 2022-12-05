@@ -1,45 +1,61 @@
+import { useState } from 'react';
 import './App.css';
+import TaskItem from './component/task-item';
 import TodoList from './db.json'
 
-function clickHandler(event) {
-      console.log(event)
-}
-// const TodoList = 
+
+// const todos = TodoList 
 // console.log(TodoList);
 function App() {
+
+  const [label,setLabel] = useState("")
+  const [todos,setTodos] = useState(TodoList.todos)
+
+  console.log(todos)
+
+  function changeHandler(event){
+     setLabel(event.target.value)
+  }
+
+  function addNewItem() {
+  //     setTodos((data)=>{
+  //       console.log(data)
+  //       const newTodo = {
+  //         "label" : label,
+  //         "done":false,
+  //         "tags":[]
+  //       }
+  //       console.log([...data,newTodo])
+  //       return data
+  //     })
+  }
 
   return (
     <div className="App">
       <main className="container">
-        <header className="p-3 bg-secondary text-center">
+
+{todos.map(x=><b>-</b>)}
+
+        {/* <header className="p-3 bg-secondary text-center">
             <h1>Todo APP</h1>
         </header>
+        {label}
         
         <div className="input-group my-3">
-          <input type="text" className="form-control" placeholder="Aggiungi una cosa da fare" aria-label="Aggiungi una cosa da fare" aria-describedby="bottone-aggiungi"/>
-          <button className="btn btn-primary" type="button" id="bott-aggiungi">aggiungi</button>
+          <input type="text" className="form-control" value={label} onChange={changeHandler} placeholder="Aggiungi una cosa da fare" aria-label="Aggiungi una cosa da fare" aria-describedby="bottone-aggiungi"/>
+          <button className="btn btn-primary" type="button" id="bott-aggiungi" onClick={addNewItem}>aggiungi</button>
         </div>
         
         <ul className="list-group">
             {
-              TodoList.todos.map( todo => {
-                const badge = todo.tags.map(tag => <span key={tag} className="badge badge-primary bg-primary badge-pill">{tag.toLowerCase()} </span>) 
-                
-                return (
-                  <li key={todo.id} className="list-group-item d-flex justify-content-between" onClick={clickHandler} >
-                    <div className="left">
-                        <input className="form-check-input me-1" type="checkbox" value="" id={todo.id}/>
-                        <label className="form-check-label" htmlFor={todo.id}>{todo.label }</label>
-                    </div> 
-                    <div className="right">{badge}</div>  
-                  </li>
-                )
+              todos.map( todo => { 
+                return <TaskItem key={todo.id} data={todo}></TaskItem>
               })
                 
                 
             }
            
-        </ul>
+        </ul> */}
 
     </main>
     </div>
