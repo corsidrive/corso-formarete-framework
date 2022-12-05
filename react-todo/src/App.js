@@ -1,11 +1,10 @@
 import './App.css';
 import SearchBar from './components/search-bar';
+import TaskItem from './components/task-item';
 
 import TodoList from './db.json'
 
-function clickHandler(event) {
-      console.log(event)
-}
+
 // const TodoList = 
 // console.log(TodoList);
 function App() {
@@ -16,12 +15,13 @@ function App() {
         <header className="p-3 bg-secondary text-center">
             <h1>Todo APP</h1>
         </header>
-        
-        <SearchBar />
+        {/* const pippo = "ciao sono pippo" */}
+        {/* <SearchBar colore={"rosso"} pippo={"ciao sono pippo"} /> */}
+        <SearchBar  />
         
         <ul className="list-group">
             {
-              TodoList.todos.map( todo => <TaskItem /> )  
+              TodoList.todos.map( todo => <TaskItem data={todo}   key={todo.id} />)  
             }
            
         </ul>
