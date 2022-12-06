@@ -100,17 +100,20 @@ inclusione del file
 - npm init
 
 
-
-
+# Spread operator e 
+[Spread_syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+[Destructuring_assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 # REACT
 
+- [usare hook state](https://it.reactjs.org/docs/hooks-state.html)
+
 ## Articoli 
+
 
 - [component](https://create-react-app.dev/docs/importing-a-component) 
 - [component function component](https://www.robinwieruch.de/react-function-component/)
 
 - [Thinking React](https://reactjs.org/docs/thinking-in-react.html)
-- [lo state](https://reactjs.org/docs/hooks-state.html)
 
 
 - [Aggiungere bootstrap](https://create-react-app.dev/docs/adding-bootstrap/)
