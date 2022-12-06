@@ -8,7 +8,7 @@ import TodoList from './db.json'
 // const TodoList = 
 // console.log(TodoList);
 function App() {
-  const [todo,setTodo] = useState([]) // [var,function]
+  const [todos,setTodos] = useState([]) // [var,function]
   // const todo = useState()[0]
   // const setTodo = useState()[1]
   // hook -> funzioni che intercettano qualcosa
@@ -25,7 +25,7 @@ function App() {
         
         <ul className="list-group">
             {
-              TodoList.todos.map( todo => <TaskItem data={todo}   key={todo.id} />)  
+              todos.map( todo => <TaskItem data={todo}   key={todo.id} />)  
             }
            
         </ul>
