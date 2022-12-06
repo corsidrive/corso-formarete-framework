@@ -1,6 +1,6 @@
 // function expression
 // funzioni sono tipi di prima classe 
-const addTodo = function(oldTodoList,label = "da fare",tags = []){
+export const addTodo = function(oldTodoList,label = "da fare",tags = []){
     // ES6 operatore di destrutturazione
     // creo una copia di oldTodoList
     const id = oldTodoList.length
@@ -8,7 +8,7 @@ const addTodo = function(oldTodoList,label = "da fare",tags = []){
         "id": id,
         "label":label,
         "done":false,
-        "tag":tags
+        "tags":tags
     } 
 
     // senza push con spread operator
@@ -22,10 +22,7 @@ const addTodo = function(oldTodoList,label = "da fare",tags = []){
 
 //console.log(newTasklist);
 
-
-
-
-function removeTodo(oldTodoList,idDaEliminare) {
+export function removeTodo(oldTodoList,idDaEliminare) {
     const newTasklist = [...oldTodoList]
     const index =  newTasklist.findIndex((todo)=>{
         //console.log("vedo:",todo.id,idDaEliminare,todo.id == idDaEliminare)
@@ -36,7 +33,7 @@ function removeTodo(oldTodoList,idDaEliminare) {
 }
 
 
-const toggleTodo = (oldTodoList,idDaCambiare) => {
+export const toggleTodo = (oldTodoList,idDaCambiare) => {
     const newTasklist = [...oldTodoList]
     const index = newTasklist.findIndex(todo => todo.id == idDaCambiare)
     newTasklist[index].done = !newTasklist[index].done 
@@ -45,14 +42,14 @@ const toggleTodo = (oldTodoList,idDaCambiare) => {
 }
 
 
-let newTasklist = []
-newTasklist = addTodo(newTasklist); // default // done false
-newTasklist = addTodo(newTasklist,'Comprare il latte');
-newTasklist = addTodo(newTasklist,'Meeet di lavoro',['urgente']);
-
-console.log("prima della rimozione",newTasklist);
-
-newTasklist = removeTodo(newTasklist,1)
-newTasklist = toggleTodo(newTasklist,0)
-newTasklist = toggleTodo(newTasklist,2)
-console.log("dopo della rimozione",newTasklist);
+//let newTasklist = []
+//newTasklist = addTodo(newTasklist); // default // done false
+//newTasklist = addTodo(newTasklist,'Comprare il latte');
+//newTasklist = addTodo(newTasklist,'Meeet di lavoro',['urgente']);
+//
+//console.log("prima della rimozione",newTasklist);
+//
+//newTasklist = removeTodo(newTasklist,1)
+//newTasklist = toggleTodo(newTasklist,0)
+//newTasklist = toggleTodo(newTasklist,2)
+//console.log("dopo della rimozione",newTasklist);

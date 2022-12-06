@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from './components/search-bar';
 import TaskItem from './components/task-item';
 import TodoList from './db.json'
+import { addTodo } from './service/TodoService';
 
 
 // const TodoList = 
@@ -12,7 +13,14 @@ function App() {
   // const todo = useState()[0]
   // const setTodo = useState()[1]
   // hook -> funzioni che intercettano qualcosa
-  MediaStreamAudioDestinationNode
+  const aggiungiNuovo = (label) => {
+      setTodos((todos)=>{
+        const nuovoElenco = addTodo(todos,label)
+        console.log(nuovoElenco)
+        return nuovoElenco
+      })
+  }
+
   return (
     <div className="App">
       <main className="container">
@@ -21,7 +29,7 @@ function App() {
         </header>
         {/* const pippo = "ciao sono pippo" */}
         {/* <SearchBar colore={"rosso"} pippo={"ciao sono pippo"} /> */}
-        <SearchBar buttonLabel="nuova task" />
+        <SearchBar onBottoneAggiungiPremuto={aggiungiNuovo}  buttonLabel="nuova task" />
         
         <ul className="list-group">
             {
