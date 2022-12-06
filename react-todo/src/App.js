@@ -3,16 +3,29 @@ import './App.css';
 import SearchBar from './components/search-bar';
 import TaskItem from './components/task-item';
 import TodoList from './db.json'
+import { addTodo } from './service/TodoService';
 
 
 // const TodoList = 
 // console.log(TodoList);
 function App() {
-  const [todo,setTodo] = useState([]) // [var,function]
+  const [todos,setTodos] = useState(TodoList.todos) // [var,function]
   // const todo = useState()[0]
   // const setTodo = useState()[1]
   // hook -> funzioni che intercettano qualcosa
-  MediaStreamAudioDestinationNode
+  const aggiungiNuovo = (label) => {
+      setTodos((todos)=>{
+        const nuovoElenco = addTodo(todos,label)
+        console.log(nuovoElenco)
+        return nuovoElenco
+      })
+  }
+
+  const eliminaTask = (idDaEliminare) => {
+      // setTodos // usare la funzione di  TodoService 
+      console.log("devo eseguire eliminazioone di ",idDaEliminare)
+  } 
+
   return (
     <div className="App">
       <main className="container">
@@ -21,11 +34,11 @@ function App() {
         </header>
         {/* const pippo = "ciao sono pippo" */}
         {/* <SearchBar colore={"rosso"} pippo={"ciao sono pippo"} /> */}
-        <SearchBar buttonLabel="nuova task" />
+        <SearchBar onBottoneAggiungiPremuto={aggiungiNuovo}  buttonLabel="nuova task" />
         
         <ul className="list-group">
             {
-              TodoList.todos.map( todo => <TaskItem data={todo}   key={todo.id} />)  
+              todos.map( todo => <TaskItem onEliminaPremuto={eliminaTask} data={todo}   key={todo.id} />)  
             }
            
         </ul>

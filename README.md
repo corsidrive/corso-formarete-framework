@@ -107,6 +107,9 @@ inclusione del file
 
 - [usare hook state](https://it.reactjs.org/docs/hooks-state.html)
 
+
+- parent - child
+https://bobbyhadz.com/blog/react-pass-data-from-child-to-parent#:~:text=To%20pass%20data%20from%20child,the%20function%20in%20the%20Parent%20.
 ## Articoli 
 
 
