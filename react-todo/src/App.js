@@ -9,7 +9,7 @@ import { addTodo } from './service/TodoService';
 // const TodoList = 
 // console.log(TodoList);
 function App() {
-  const [todos,setTodos] = useState([]) // [var,function]
+  const [todos,setTodos] = useState(TodoList.todos) // [var,function]
   // const todo = useState()[0]
   // const setTodo = useState()[1]
   // hook -> funzioni che intercettano qualcosa
@@ -20,6 +20,11 @@ function App() {
         return nuovoElenco
       })
   }
+
+  const eliminaTask = (idDaEliminare) => {
+      // setTodos // usare la funzione di  TodoService 
+      console.log("devo eseguire eliminazioone di ",idDaEliminare)
+  } 
 
   return (
     <div className="App">
@@ -33,7 +38,7 @@ function App() {
         
         <ul className="list-group">
             {
-              todos.map( todo => <TaskItem data={todo}   key={todo.id} />)  
+              todos.map( todo => <TaskItem onEliminaPremuto={eliminaTask} data={todo}   key={todo.id} />)  
             }
            
         </ul>
