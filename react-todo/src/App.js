@@ -3,7 +3,7 @@ import './App.css';
 import SearchBar from './components/search-bar';
 import TaskItem from './components/task-item';
 import TodoList from './db.json'
-import { addTodo, removeTodo } from './service/TodoService';
+import { addTodo, removeTodo, toggleTodo } from './service/TodoService';
 
 
 // const TodoList = 
@@ -29,6 +29,12 @@ function App() {
       })
   } 
 
+  const setFatto = (idDaModificare) => {
+      setTodos((oldtodo)=>{
+        return toggleTodo(oldtodo,idDaModificare)
+      })
+  }
+
   return (
     <div className="App">
       <main className="container">
@@ -41,7 +47,9 @@ function App() {
         
         <ul className="list-group">
             {
-              todos.map( todo => <TaskItem onEliminaPremuto={eliminaTask} 
+              todos.map( todo => <TaskItem
+                                  onChecked={setFatto}     
+                                  onEliminaPremuto={eliminaTask} 
                                  data={todo}   key={todo.id} />)  
             }
            
