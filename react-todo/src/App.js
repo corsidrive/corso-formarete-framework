@@ -29,10 +29,18 @@ function App() {
       })
   } 
 
-  const setFatto = (idDaModificare) => {
-      setTodos((oldtodo)=>{
-        return toggleTodo(oldtodo,idDaModificare)
+  const setFatto = (idDaModificare,value) => {
+
+      console.log("setFatto",idDaModificare);
+      setTodos((old)=>{
+          const newTodo = [...old]
+          const index = newTodo.findIndex(i => i.id == idDaModificare)
+          newTodo[index].done = value
+          return newTodo
       })
+      // setTodos((oldtodo)=>{
+      //   return toggleTodo(oldtodo,idDaModificare)
+      // })
   }
 
   return (
