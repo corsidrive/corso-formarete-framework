@@ -8,9 +8,9 @@ export default function TaskItem(props){
      */
     const handleEliminaTask = (idDelTodoDaEliminare)=> {
       return (event) => {
-        console.log("premuto id:",idDelTodoDaEliminare)
+        console.log("premuto id nel figlio:",idDelTodoDaEliminare)
 
-        props.onEliminaPremuto(idDelTodoDaEliminare     )
+        props.onEliminaPremuto(idDelTodoDaEliminare) // Cè il codice del componente padre 
         // 01 - creare la funzione di eliminazione nel componente parent (App.js)
         // 02 - usarla come props dentro il componente figlio (task-item.js)
 
@@ -20,8 +20,9 @@ export default function TaskItem(props){
     return (
         <li key={todo.id} className="list-group-item d-flex justify-content-between" onClick={clickHandler} >
           <div className="left">
-              <input className="form-check-input me-1" type="checkbox" value="" id={todo.id}/>
-              <label className="form-check-label" htmlFor={todo.id}>{todo.label }</label>
+            {/* {JSON.stringify(todo)} */}
+              <input checked={todo.done} className="form-check-input me-1" type="checkbox" value="" id={todo.id}/>
+              <label className="form-check-label" htmlFor={todo.id}>{todo.label } <b>fatto ?{todo.done}</b></label>
           </div> 
           <div className="right">
           {badge}

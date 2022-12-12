@@ -4,6 +4,9 @@ export default function SearchBar(props) {
     const  [newLabel,setNewLabel] = useState('')
     //ììsetLabel( oldLabel => 'nuovo valore eticetta'+oldLabel);
     
+    // quando il campo di testo cambia (sto scrivendo) anche  la variabile
+    // newLabel label cambia 
+    // campoditesto  <==> newLabel
     const handleNewLabel = event => {
       // console.log("handleNewLabel",event.target.value)
       setNewLabel(event.target.value)

@@ -3,7 +3,7 @@ import './App.css';
 import SearchBar from './components/search-bar';
 import TaskItem from './components/task-item';
 import TodoList from './db.json'
-import { addTodo } from './service/TodoService';
+import { addTodo, removeTodo } from './service/TodoService';
 
 
 // const TodoList = 
@@ -24,6 +24,9 @@ function App() {
   const eliminaTask = (idDaEliminare) => {
       // setTodos // usare la funzione di  TodoService 
       console.log("sono nel componente parent ",idDaEliminare)
+      setTodos((oldtodo)=>{
+          return removeTodo(oldtodo,idDaEliminare)
+      })
   } 
 
   return (

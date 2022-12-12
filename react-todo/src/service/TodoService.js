@@ -24,6 +24,7 @@ export const addTodo = function(oldTodoList,label = "da fare",tags = []){
 
 export function removeTodo(oldTodoList,idDaEliminare) {
     const newTasklist = [...oldTodoList]
+    
     const index =  newTasklist.findIndex((todo)=>{
         //console.log("vedo:",todo.id,idDaEliminare,todo.id == idDaEliminare)
         return todo.id == idDaEliminare
