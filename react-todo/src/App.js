@@ -23,7 +23,7 @@ function App() {
 
   const eliminaTask = (idDaEliminare) => {
       // setTodos // usare la funzione di  TodoService 
-      console.log("devo eseguire eliminazioone di ",idDaEliminare)
+      console.log("sono nel componente parent ",idDaEliminare)
   } 
 
   return (
@@ -38,7 +38,8 @@ function App() {
         
         <ul className="list-group">
             {
-              todos.map( todo => <TaskItem onEliminaPremuto={eliminaTask} data={todo}   key={todo.id} />)  
+              todos.map( todo => <TaskItem onEliminaPremuto={eliminaTask} 
+                                 data={todo}   key={todo.id} />)  
             }
            
         </ul>

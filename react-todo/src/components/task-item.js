@@ -10,8 +10,8 @@ export default function TaskItem(props){
       return (event) => {
         console.log("premuto id:",idDelTodoDaEliminare)
 
-        props.onEliminaPremuto(idDelTodoDaEliminare)
-        // 01 - creare la funzione di leiminazione nel componente parent (App.js)
+        props.onEliminaPremuto(idDelTodoDaEliminare     )
+        // 01 - creare la funzione di eliminazione nel componente parent (App.js)
         // 02 - usarla come props dentro il componente figlio (task-item.js)
 
       }
