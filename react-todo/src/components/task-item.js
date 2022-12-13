@@ -17,9 +17,10 @@ export default function TaskItem(props){
     }
 
     const utenteHaCambiatoLoStato = (id) => {
-        setFatto( old =>!old)
-        return (event) => {
-          props.onChecked(id) 
+      return (event) => {
+        const newValue = !fatto
+          setFatto(newValue)
+          props.onChecked(id,newValue) 
         }
     }
 
@@ -35,7 +36,7 @@ export default function TaskItem(props){
               <label className="form-check-label" htmlFor={todo.id}>
                 {todo.id} - {todo.label} 
                 ({todo.done ? "fatto":"da fare"})
-                <b>{fatto ? "fatto":"da fare"}</b>
+                {/* <b>{fatto ? "fatto":"da fare"}</b> */}
               </label>
               
           </div> 
