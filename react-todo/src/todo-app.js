@@ -27,6 +27,9 @@ export default function TodoApp(){
 
   return (
     <div className="App">
+      <pre>
+        {JSON.stringify(todos,null,2)}
+      </pre>
       <main className="container">
         <header className="p-3 bg-secondary text-center">
             <h1>Todo APP</h1>

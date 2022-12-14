@@ -1,14 +1,31 @@
-import { useState } from "react"
+import { isValidElement, useState } from "react"
 
-export default function Anagrafica(){
+export default function Anagrafica(props){
     const [nome,setNome] = useState('roby')
     const [cognome,setCognome] = useState('')
 
+    
     function onNomeChange(event) {
-            setNome(event.target.value)
+        setNome(event.target.value)
     }
+    
+    const isName = (value) => {
+        const re = /^[a-zA-Z -]+$/g
+        return re.test(value)
+    }
+    // console.log(isName)
+    const isRequired = (value) => {
+                            // console.log(value.trim().length > 0,isName(value),value);
+                            return (value.length > 0) && isName(value)
+                        } 
 
-    const isRequired = (value) => (value.length > 0) 
+    function onClickHandler() {
+        console.log("onClickHandler")
+        const info = {}
+        info.nome = nome 
+        info.cognome = cognome 
+        props.onAnagraficaCompletata(info)
+    } 
 
     return (
         <section>
@@ -30,7 +47,9 @@ export default function Anagrafica(){
                  onChange={ event => setCognome(event.target.value)}
                  />
             </div>
-            <button className="btn btn-primary"  disabled={true}  onClick={()=>alert("ciccio")}>invia</button>
+            {!(isRequired(nome) && isRequired(cognome)) ? "vero" : "false"} 
+            <button className="btn btn-primary"  disabled={!(isRequired(nome) && isRequired(cognome))}  
+            onClick={onClickHandler}>invia</button>
         </section>
     )
 }
