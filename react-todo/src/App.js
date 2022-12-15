@@ -1,13 +1,7 @@
-import { useState } from 'react';
+import React from 'react';
 import './App.css';
-import SearchBar from './components/search-bar';
-import TaskItem from './components/task-item';
-import TodoList from './db.json'
-import { addTodo, removeTodo, toggleTodo } from './service/TodoService';
+import TodoApp from './todo-app';
 
-
-// const TodoList = 
-// console.log(TodoList);
 function App() {
   const [todos,setTodos] = useState(TodoList.todos) // [var,function]
   // const todo = useState()[0]
@@ -29,18 +23,10 @@ function App() {
       })
   } 
 
-  const setFatto = (idDaModificare,value) => {
-
-      console.log("setFatto",idDaModificare);
-      setTodos((old)=>{
-          const newTodo = [...old]
-          const index = newTodo.findIndex(i => i.id == idDaModificare)
-          newTodo[index].done = value
-          return newTodo
+  const setFatto = (idDaModificare) => {
+      setTodos((oldtodo)=>{
+        return toggleTodo(oldtodo,idDaModificare)
       })
-      // setTodos((oldtodo)=>{
-      //   return toggleTodo(oldtodo,idDaModificare)
-      // })
   }
 
   return (
