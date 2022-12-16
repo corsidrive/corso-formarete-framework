@@ -32,6 +32,7 @@ export default function Anagrafica(props){
             <div className="m-3">               
                 <label className="form-label">nome</label>
                 <input type="text" className={'form-control ' + (isRequired(nome) ? 'is-valid':'is-invalid') } 
+                
                 value={nome} 
                 onChange={onNomeChange}
                 />

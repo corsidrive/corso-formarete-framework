@@ -9,7 +9,16 @@ export default function TodoApp(){
   
   const aggiungiNuovo = (label) => setTodos( todos => addTodo(todos,label))
   const eliminaTask = (idDaEliminare) => setTodos( oldtodo => removeTodo(oldtodo,idDaEliminare))
-   
+  
+  const impostaDone = (idDaCambiare,nuovoStatoDiDone) => {
+    console.log("padre",idDaCambiare,nuovoStatoDiDone)
+    setTodos((oldtodos) => {
+      const newtodos = [...oldtodos] // copia
+      const index = newtodos.findIndex(todo => todo.id == idDaCambiare )
+      newtodos[index].done = nuovoStatoDiDone
+      return newtodos   
+    })
+  }
 
   return (
     <div className="App">
@@ -23,11 +32,15 @@ export default function TodoApp(){
         <ul className="list-group">
             {
               todos.map( todo => <TaskItem onEliminaPremuto={eliminaTask} 
+                                           onCheckboxChange={impostaDone}
                                  data={todo}   key={todo.id} />)  
             }
            
         </ul>
 
+        <pre>
+        {JSON.stringify(todos,null,2)}
+        </pre>
     </main>
     </div>
   );
