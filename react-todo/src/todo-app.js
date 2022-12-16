@@ -1,23 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SearchBar from './components/search-bar';
 import TaskItem from './components/task-item';
 import TodoList from './db.json'
-import { addTodo, removeTodo } from './service/TodoService';
+import { addTodo, removeTodo, setTodoState } from './service/TodoService';
 
 export default function TodoApp(){
-  const [todos,setTodos] = useState(TodoList.todos)
+  const [todos,setTodos] = useState([])
   
+  // useEffect(()=>{
+  //   fetch('http://localhost:8888/todos')
+  //   .then((resp)=>resp.json())
+  //   .then((json)=>setTodos(json))
+  // })
+
   const aggiungiNuovo = (label) => setTodos( todos => addTodo(todos,label))
   const eliminaTask = (idDaEliminare) => setTodos( oldtodo => removeTodo(oldtodo,idDaEliminare))
   
   const impostaDone = (idDaCambiare,nuovoStatoDiDone) => {
-    console.log("padre",idDaCambiare,nuovoStatoDiDone)
-    setTodos((oldtodos) => {
-      const newtodos = [...oldtodos] // copia
-      const index = newtodos.findIndex(todo => todo.id == idDaCambiare )
-      newtodos[index].done = nuovoStatoDiDone
-      return newtodos   
-    })
+    setTodos((oldtodos) => setTodoState(oldtodos,idDaCambiare,nuovoStatoDiDone))
   }
 
   return (

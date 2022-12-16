@@ -1,0 +1,54 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "label": "Comprare il latte",
+      "done": true,
+      "tags": [
+        "urgente",
+        "casa"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "Comprare Farina",
+      "done": true,
+      "tags": [
+        "casa"
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Meeting su zoom",
+      "done": true,
+      "tags": [
+        "lavoro",
+        "urgente"
+      ]
+    },
+    {
+      "id": 4,
+      "label": "Test per maiuscole",
+      "done": true,
+      "tags": [
+        "Urgente"
+      ]
+    },
+    {
+      "id": 5,
+      "label": "Test per maiuscole",
+      "done": true,
+      "tags": [
+        "URGENTE"
+      ]
+    },
+    {
+      "id": 6,
+      "label": "Test per maiuscole",
+      "done": true,
+      "tags": [
+        "urgEnTe"
+      ]
+    }
+  ]
+}

@@ -42,6 +42,14 @@ export const toggleTodo = (oldTodoList,idDaCambiare) => {
     return newTasklist
 }
 
+export const setTodoState = (oldtodos,idDaCambiare,nuovoStatoDiDone) => {
+    
+    const newtodos = [...oldtodos] // copia
+    const index = newtodos.findIndex(todo => todo.id == idDaCambiare )
+    newtodos[index].done = nuovoStatoDiDone
+    return newtodos   
+  }
+
 
 //let newTasklist = []
 //newTasklist = addTodo(newTasklist); // default // done false
