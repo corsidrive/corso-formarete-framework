@@ -23,10 +23,6 @@ function App() {
  return (
    <main className='container'>
     <TodoApp></TodoApp>
-    
-     <Anagrafica onAnagraficaCompletata={onAnagraficaCompletata} /> 
-    
-      <h1 className="display-1">{nome} {cognome}</h1>
    </main>
  )
 
