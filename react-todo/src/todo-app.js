@@ -7,18 +7,30 @@ import { addTodo, removeTodo, setTodoState } from './service/TodoService';
 export default function TodoApp(){
   const [todos,setTodos] = useState([])
   
+  if(localStorage.getItem('todostorage') == null){
+    console.log("NUOVO")
+  }else{
+    console.log("ESISTENTE");
+    const storage = localStorage.getItem('todostorage') // s le informazioni sono una stringa
+    const newtodo = JSON.parse(storage)
+    //setTodos(newtodo)
+    // https://blog.logrocket.com/using-localstorage-react-hooks/
+  }
+  
+  
   // useEffect(()=>{
   //   fetch('http://localhost:8888/todos')
   //   .then((resp)=>resp.json())
   //   .then((json)=>setTodos(json))
   // })
 
+
   const aggiungiNuovo = (label) => setTodos( todos => addTodo(todos,label))
   const eliminaTask = (idDaEliminare) => setTodos( oldtodo => removeTodo(oldtodo,idDaEliminare))
   
   const impostaDone = (idDaCambiare,nuovoStatoDiDone) => {
     setTodos((oldtodos) => setTodoState(oldtodos,idDaCambiare,nuovoStatoDiDone))
-  }
+  } 
 
   return (
     <div className="App">

@@ -17,6 +17,8 @@ export const addTodo = function(oldTodoList,label = "da fare",tags = []){
     // con PUSH
     const newTodoList = [...oldTodoList] // copia
     newTodoList.push(newTask) // aggiungo
+
+    localStorage.setItem('todostorage',JSON.stringify(newTodoList))
     return newTodoList   
 }
 
@@ -30,6 +32,8 @@ export function removeTodo(oldTodoList,idDaEliminare) {
         return todo.id == idDaEliminare
     })
     newTasklist.splice(index,1)
+    localStorage.setItem('todostorage',JSON.stringify(newTasklist))
+
     return newTasklist
 }
 
@@ -38,6 +42,7 @@ export const toggleTodo = (oldTodoList,idDaCambiare) => {
     const newTasklist = [...oldTodoList]
     const index = newTasklist.findIndex(todo => todo.id == idDaCambiare)
     newTasklist[index].done = !newTasklist[index].done 
+    localStorage.setItem('todostorage',JSON.stringify(newTasklist))
 
     return newTasklist
 }
@@ -47,6 +52,8 @@ export const setTodoState = (oldtodos,idDaCambiare,nuovoStatoDiDone) => {
     const newtodos = [...oldtodos] // copia
     const index = newtodos.findIndex(todo => todo.id == idDaCambiare )
     newtodos[index].done = nuovoStatoDiDone
+    localStorage.setItem('todostorage',JSON.stringify(newtodos))
+
     return newtodos   
   }
 
