@@ -1,15 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SearchBar from './components/search-bar';
 import TaskItem from './components/task-item';
 import TodoList from './db.json'
-import { addTodo, removeTodo } from './service/TodoService';
+import { addTodo, getIndexTodo, removeTodo, setTodoState } from './service/TodoService';
 
 export default function TodoApp(){
-  const [todos,setTodos] = useState(TodoList.todos)
+  const [todos,setTodos] = useState([])
+
+  useEffect(() => {
+    const items = localStorage.getItem('todostorage') == null ? [] : JSON.parse(localStorage.getItem('todostorage')) 
+    setTodos(items)
+    }
+  ,[])
   
   const aggiungiNuovo = (label) => setTodos( todos => addTodo(todos,label))
   const eliminaTask = (idDaEliminare) => setTodos( oldtodo => removeTodo(oldtodo,idDaEliminare))
-   
+  
+  const impostaDone = (idDaCambiare,nuovoStatoDiDone) => {
+    setTodos((oldtodos) => setTodoState(oldtodos,idDaCambiare,nuovoStatoDiDone))
+  } 
 
   return (
     <div className="App">
@@ -23,6 +32,7 @@ export default function TodoApp(){
         <ul className="list-group">
             {
               todos.map( todo => <TaskItem onEliminaPremuto={eliminaTask} 
+                                           onCheckboxChange={impostaDone}
                                  data={todo}   key={todo.id} />)  
             }
            
