@@ -2,18 +2,17 @@ import { useEffect, useState } from 'react';
 import SearchBar from './components/search-bar';
 import TaskItem from './components/task-item';
 import TodoList from './db.json'
-import { addTodo, removeTodo, setTodoState } from './service/TodoService';
+import { addTodo, getIndexTodo, removeTodo, setTodoState } from './service/TodoService';
 
 export default function TodoApp(){
   const [todos,setTodos] = useState([])
-  // [] --> l'effetto collaterale (Side Effect) verrà eseguito una volta sola  
-  useEffect(()=>{
-    console.log("dentro")
-    const todos = (localStorage.getItem('todstorage') == null ? [] : JSON.parse(localStorage.getItem('todostorage')))
-    console.log("storage",todos)
-  },[])
 
-
+  useEffect(() => {
+    const items = localStorage.getItem('todostorage') == null ? [] : JSON.parse(localStorage.getItem('todostorage')) 
+    setTodos(items)
+    }
+  ,[])
+  
   const aggiungiNuovo = (label) => setTodos( todos => addTodo(todos,label))
   const eliminaTask = (idDaEliminare) => setTodos( oldtodo => removeTodo(oldtodo,idDaEliminare))
   
@@ -39,9 +38,6 @@ export default function TodoApp(){
            
         </ul>
 
-        <pre>
-        {JSON.stringify(todos,null,2)}
-        </pre>
     </main>
     </div>
   );
