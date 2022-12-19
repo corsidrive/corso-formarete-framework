@@ -1,5 +1,7 @@
 // function expression
 // funzioni sono tipi di prima classe 
+
+
 export const addTodo = function(oldTodoList,label = "da fare",tags = []){
     // ES6 operatore di destrutturazione
     // creo una copia di oldTodoList
