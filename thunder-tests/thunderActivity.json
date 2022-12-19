@@ -1,0 +1,97 @@
+[
+  {
+    "_id": "8442eaf9-f969-4120-931d-32690e0242fa",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/todos",
+    "url": "http://localhost:3000/todos",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-12-18T21:08:32.412Z",
+    "modified": "2022-12-18T21:08:48.807Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "  {\r\n    \"id\": 10,\r\n    \"label\": \"Test per maiuscole\",\r\n    \"done\": true,\r\n    \"tags\": [\r\n      \"Urgente\"\r\n    ]\r\n  }",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c9f11dc6-4c2e-4a0a-a3c0-46027e532a58",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/todos",
+    "url": "http://localhost:3000/todos",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-18T21:09:03.364Z",
+    "modified": "2022-12-18T21:09:03.364Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "  {\r\n    \"id\": 10,\r\n    \"label\": \"Test per maiuscole\",\r\n    \"done\": true,\r\n    \"tags\": [\r\n      \"Urgente\"\r\n    ]\r\n  }",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d746a4d6-ef0e-4931-9c6f-81baef9ca619",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/todos/6",
+    "url": "http://localhost:3000/todos/6",
+    "method": "PATCH",
+    "sortNum": 0,
+    "created": "2022-12-18T21:10:04.193Z",
+    "modified": "2022-12-18T21:10:04.193Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "  {\r\n    \"id\": 10,\r\n    \"label\": \"Test per maiuscole\",\r\n    \"done\": true,\r\n    \"tags\": [\r\n      \"Urgente\"\r\n    ]\r\n  }",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e79fda2b-e025-43cb-bd39-b1cf8e8ecb94",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/todos/6",
+    "url": "http://localhost:3000/todos/6",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-12-18T21:10:15.213Z",
+    "modified": "2022-12-18T21:10:15.213Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "  {\r\n    \"id\": 10,\r\n    \"label\": \"Test per maiuscole\",\r\n    \"done\": true,\r\n    \"tags\": [\r\n      \"Urgente\"\r\n    ]\r\n  }",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c71948dd-b628-4cef-a8e8-48e55a1d3ffb",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/todos",
+    "url": "http://localhost:3000/todos",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-12-18T21:10:26.001Z",
+    "modified": "2022-12-18T21:10:26.001Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "  {\r\n    \"id\": 10,\r\n    \"label\": \"Test per maiuscole\",\r\n    \"done\": true,\r\n    \"tags\": [\r\n      \"Urgente\"\r\n    ]\r\n  }",
+      "form": []
+    },
+    "tests": []
+  }
+]
